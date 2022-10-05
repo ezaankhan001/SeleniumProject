@@ -20,7 +20,7 @@ namespace SeleniumQuiz.POM.Logout
 
         public void LogoutFunction(string emailAddress, string password)
         {
-            IsElementVisible(home);
+            Assert.IsTrue(IsElementVisible(home));
             Click(Login);
             Write(EmailAddress, emailAddress);
             Write(Password, password);

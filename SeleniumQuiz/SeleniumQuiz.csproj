@@ -72,6 +72,8 @@
     <Compile Include="POM\Place Order\PlaceOrderTC.cs" />
     <Compile Include="POM\RegisterUsingExisting\Existing.cs" />
     <Compile Include="POM\RegisterUsingExisting\ExistingTC.cs" />
+    <Compile Include="POM\ScrollUpDown\Scroll.cs" />
+    <Compile Include="POM\ScrollUpDown\ScrollTC.cs" />
     <Compile Include="POM\SignUp\SignUpPage.cs" />
     <Compile Include="POM\SignUp\SignUpTC.cs" />
     <Compile Include="POM\Subscription\Subscription.cs" />

@@ -155,6 +155,11 @@ namespace SeleniumQuiz
             //js.ExecuteScript("window.scrollBy(0,600);");
         }
 
+        public void scrollBottom()
+        {
+            IJavaScriptExecutor js = driver as IJavaScriptExecutor;
+            js.ExecuteScript("window.ScrollTo(0,document" + "Body" + ".scrollHeight)");
+        }
 
 
 

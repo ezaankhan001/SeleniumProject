@@ -41,9 +41,9 @@ namespace SeleniumQuiz.POM.SignUp
 
         public void RegisterData(string fName, string emailAddress, string password, string date, string month, string year,string firstName, string lastName, string company, string address1, string address2, string state, string city, string zipcode, string mobileNumber)
         {
-            IsElementVisible(home);
+            Assert.IsTrue(IsElementVisible(home));
             Click(SignUp);
-            //Assert.AreEqual("New User Signup!", driver.Title);
+
             Write(Name, fName);
             Write(EmailAddress, emailAddress);
             Click(registerButton);

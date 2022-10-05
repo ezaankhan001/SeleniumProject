@@ -19,7 +19,7 @@ namespace SeleniumQuiz.POM.RegisterUsingExisting
 
     public void RegisteredUser(String name, string emailAddress)
         {
-        IsElementVisible(home);
+        Assert.IsTrue(IsElementVisible(home));
         Click(SignUp);
         Write(Name, name);
         Write(EmailAddress, emailAddress);

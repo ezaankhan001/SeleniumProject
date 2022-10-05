@@ -20,10 +20,10 @@ namespace SeleniumQuiz.POM.AddProductsToCart
         By cont = By.XPath("//button[text()='Continue Shopping']");
         By Order2 = By.XPath("(//a[@data-product-id='2'])[1]");
         By cart = By.XPath("//u[text()='View Cart']");
-
+        By Checkout = By.CssSelector("#do_action > div.container > div > div > a");
         public void Addcart()
         {
-            IsElementVisible(home);
+            Assert.IsTrue(IsElementVisible(home));
             Click(products);
             HoverNClick(Order);
             ImplicitWait(2);
