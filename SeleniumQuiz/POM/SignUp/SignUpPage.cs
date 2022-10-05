@@ -31,7 +31,7 @@ namespace SeleniumQuiz.POM.SignUp
         By City = By.Id("city");
         By ZipCode = By.Id("zipcode");
         By MobileNumber = By.Id("mobile_number");
-        By RegisterationButton = By.XPath("//button[text()='Create Account']");
+        By RegisterationButton = By.XPath("//button[@data-qa='Create Account']");
         By Continue = By.XPath("//a[text()='Continue']");
         By Delete = By.XPath("//i[@class='fa fa-home']");
         By home = By.XPath("//i[@class='fa fa-home']");

@@ -21,6 +21,7 @@ namespace SeleniumQuiz.POM.AddProductsToCart
         By Order2 = By.XPath("(//a[@data-product-id='2'])[1]");
         By cart = By.XPath("//u[text()='View Cart']");
         By Checkout = By.CssSelector("#do_action > div.container > div > div > a");
+
         public void Addcart()
         {
             Assert.IsTrue(IsElementVisible(home));

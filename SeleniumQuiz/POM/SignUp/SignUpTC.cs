@@ -18,7 +18,10 @@ namespace SeleniumQuiz.POM.SignUp
             BaseClass.Browsers("chrome");
             BaseClass.OpenURL("https://automationexercise.com");
             RegisterUser register = new RegisterUser();
+            
             register.RegisterData("ezaan", "ezaankhan021@gmail.com", "abcdefg@1", "24", "9", "1997","Ezaan","Khan", "Contour","Model Town", "Street 78", "Punjab", "Lahore", "54000","03228494340");
+        
         }
+
     }
 }

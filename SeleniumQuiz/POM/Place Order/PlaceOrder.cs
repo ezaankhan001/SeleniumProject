@@ -12,14 +12,28 @@ namespace SeleniumQuiz.POM.Place_Order
     public class PlaceOrder : BaseClass
     {
         By home = By.XPath("//i[@class='fa fa-home']");
+        By products = By.XPath("//i[@class='material-icons card_travel']");
         By Order = By.XPath("(//a[@data-product-id='1'])[1]");
+        By cont = By.XPath("//button[text()='Continue Shopping']");
+        By Order2 = By.XPath("(//a[@data-product-id='2'])[1]");
+        By cart = By.XPath("//u[text()='View Cart']");
+        By Checkout = By.CssSelector("#do_action > div.container > div > div > a");
+        By register = By.XPath("//*[@id='checkoutModal']/div/div/div[2]/p[2]/a/u");
 
-
-
-    public void Cart()
-    {
+        public void Cart()
+        {
             Assert.IsTrue(IsElementVisible(home));
             Click(Order);
+            Assert.IsTrue(IsElementVisible(home));
+            Click(products);
+            HoverNClick(Order);
+            ImplicitWait(2);
+            Click(cont);
+            HoverNClick(Order2);
+            Click(cart);
+            Click(Checkout);
+            Click(register);
+
   
         }
 
