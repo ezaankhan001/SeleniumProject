@@ -11,14 +11,17 @@ namespace SeleniumQuiz.POM.Place_Order
 {
     public class PlaceOrder : BaseClass
     {
+        By home = By.XPath("//i[@class='fa fa-home']");
         By Order = By.XPath("(//a[@data-product-id='1'])[1]");
 
 
 
     public void Cart()
     {
-        Click(Order);
-    }
+            Assert.IsTrue(IsElementVisible(home));
+            Click(Order);
+  
+        }
 
     }
 }

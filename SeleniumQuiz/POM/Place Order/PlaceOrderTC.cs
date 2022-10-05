@@ -18,11 +18,10 @@ namespace SeleniumQuiz.POM.Place_Order
             BaseClass.Browsers("chrome");
             BaseClass.OpenURL("https://automationexercise.com");
 
-            //PlaceOrder sub = new PlaceOrder();
-            //sub.Cart();
+            PlaceOrder sub = new PlaceOrder();
+            sub.Cart();
 
-            //string actual1 = driver.FindElement(By.XPath("")).Text;
-            //Assert.AreEqual("You have been successfully subscribed!", actual);
+            
 
         }
 
