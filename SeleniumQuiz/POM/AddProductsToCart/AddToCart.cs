@@ -14,14 +14,19 @@ namespace SeleniumQuiz.POM.AddProductsToCart
 {
     public class AddToCart : BaseClass
     {
-        By image = By.XPath("//*[@id='header']/div/div/div/div[1]/div/a/img");
-        By products = By.XPath("//*[@id='header']/div/div/div/div[2]/div/ul/li[2]/a");
-        By text = By.XPath("/html/body/section[2]/div/div/div[2]/div");
-        By addtoCart = By.XPath("/html/body/section[2]/div/div/div[2]/div/div[2]/div/div[1]/div[2]/div/a");
+        By products = By.XPath("//i[@class='material-icons card_travel']");
+        By Order = By.XPath("(//a[@data-product-id='1'])[1]");
+        By cont = By.XPath("//button[text()='Continue Shopping']");
+        By Order2 = By.XPath("(//a[@data-product-id='2'])[1]");
+        By cart = By.XPath("//u[text()='View Cart']");
 
         public void Addcart()
         {
-
+            Click(products);
+            HoverNClick(Order);
+            Click(cont);
+            HoverNClick(Order2);
+            Click(cart);
         }
     }
 
