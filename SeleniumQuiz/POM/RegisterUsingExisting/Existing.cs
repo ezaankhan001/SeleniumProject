@@ -10,6 +10,7 @@ namespace SeleniumQuiz.POM.RegisterUsingExisting
 { 
     public class Existing : BaseClass
     {
+    By home = By.XPath("//i[@class='fa fa-home']");
     By SignUp = By.XPath("//i[@class='fa fa-lock']");
     By Name = By.Name("name");
     By EmailAddress = By.XPath("//input[@data-qa='signup-email']");
@@ -18,6 +19,7 @@ namespace SeleniumQuiz.POM.RegisterUsingExisting
 
     public void RegisteredUser(String name, string emailAddress)
         {
+        IsElementVisible(home);
         Click(SignUp);
         Write(Name, name);
         Write(EmailAddress, emailAddress);

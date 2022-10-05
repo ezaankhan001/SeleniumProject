@@ -71,7 +71,13 @@ namespace SeleniumQuiz
             driver.FindElement(by).Click();
         }
 
-        private bool IsElementVisible(By by)
+        //public void Assertion(By by)
+        //{
+        //    IWebElement elem = findElement(by);
+        //    bool status = elem.Displayed
+
+        //}
+        public bool IsElementVisible(By by)
         {
             return (findElement(by).Displayed || findElement(by).Enabled) ? true : false;
         }

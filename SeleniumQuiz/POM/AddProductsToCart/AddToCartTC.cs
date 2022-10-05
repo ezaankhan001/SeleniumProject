@@ -15,9 +15,10 @@ namespace SeleniumQuiz.POM.AddProductsToCart
         [TestMethod]
         public void UserRegistrationWithValidData()
         {
-
             BaseClass.Browsers("chrome");
             BaseClass.OpenURL("https://automationexercise.com");
+            AddToCart register = new AddToCart();
+            register.Addcart();
         }
     }
 }

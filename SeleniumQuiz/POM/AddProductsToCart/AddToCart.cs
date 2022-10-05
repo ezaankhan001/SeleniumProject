@@ -14,6 +14,7 @@ namespace SeleniumQuiz.POM.AddProductsToCart
 {
     public class AddToCart : BaseClass
     {
+        By home = By.XPath("//i[@class='fa fa-home']");
         By products = By.XPath("//i[@class='material-icons card_travel']");
         By Order = By.XPath("(//a[@data-product-id='1'])[1]");
         By cont = By.XPath("//button[text()='Continue Shopping']");
@@ -22,8 +23,10 @@ namespace SeleniumQuiz.POM.AddProductsToCart
 
         public void Addcart()
         {
+            IsElementVisible(home);
             Click(products);
             HoverNClick(Order);
+            ImplicitWait(2);
             Click(cont);
             HoverNClick(Order2);
             Click(cart);
