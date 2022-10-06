@@ -15,7 +15,7 @@ namespace SeleniumQuiz.POM.SignUp
         By Name = By.Name("name");
         By EmailAddress = By.XPath("//input[@data-qa='signup-email']");
         By registerButton = By.XPath("//button[@data-qa='signup-button']");
-        By gender = By.Id("id_gender1");
+        By gender = By.XPath("//*[@id='id_gender1']");
         By pass = By.Id("password");
         By Date = By.Id("days");
         By Month = By.CssSelector("select[data-qa='months']");
