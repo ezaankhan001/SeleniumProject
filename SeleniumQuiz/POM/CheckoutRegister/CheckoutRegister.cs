@@ -33,6 +33,7 @@ namespace SeleniumQuiz.POM.CheckoutRegister
 
         public void checkoutRegisteration(string textarea, string cardDetails, string cardNum, string cvc1, string month, string year)
         {
+            //log.Info("Asserton");
             Assert.IsTrue(IsElementVisible(home));
             Click(products);
             ScrollToElement(Title);
