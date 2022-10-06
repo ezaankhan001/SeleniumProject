@@ -7,28 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SeleniumQuiz.POM.Place_Order
+
+namespace SeleniumQuiz.POM.CheckoutRegister
 {
     [TestClass]
-    public class PlaceOrderTC:BaseClass
+    public class CheckoutRegisterTC : BaseClass
     {
-
-    [TestMethod]
-    public void PlaceOrder()
+        [TestMethod]
+        public void RegisterOnCheckout()
         {
             Browsers("chrome");
             OpenURL("https://automationexercise.com");
             RegisterUser register = new RegisterUser();
-            PlaceOrder sub = new PlaceOrder();
-            sub.Cart();
-            register.RegisterData("ezaan", "ezaankhan020@gmail.com", "abcdefg@1", "24", "9", "1997", "Ezaan", "Khan", "Contour", "Model Town", "Street 78", "Punjab", "Lahore", "54000", "03228494340");
-            //Assertion of logged in as username text
+            CheckoutRegister check = new CheckoutRegister();
+            check.checkoutRegisteration("Dont ring the bell, just put it on the doorway!", "Ezaan Khan", "12423422134", "321", "07", "2025");
+            register.RegisterData("ezaan", "ezaankhan040@gmail.com", "abcdefg@1", "24", "9", "1997", "Ezaan", "Khan", "Contour", "Model Town", "Street 78", "Punjab", "Lahore", "54000", "03228494340");
+
             string actual = findElement(By.XPath("//*[@id='header']/div/div/div/div[2]/div/ul/li[10]/a/text()")).Text;
             Assert.AreEqual(" Logged in as ", actual);
 
-
-
         }
-
     }
 }

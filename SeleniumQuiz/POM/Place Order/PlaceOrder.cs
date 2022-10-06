@@ -19,11 +19,10 @@ namespace SeleniumQuiz.POM.Place_Order
         By cart = By.XPath("//u[text()='View Cart']");
         By Checkout = By.CssSelector("#do_action > div.container > div > div > a");
         By register = By.XPath("//*[@id='checkoutModal']/div/div/div[2]/p[2]/a/u");
-
+        //By userloggedIn = By.XPath("//*[@id='header']/div/div/div/div[2]/div/ul/li[10]/a/text()");
         public void Cart()
         {
-            Assert.IsTrue(IsElementVisible(home));
-            Click(Order);
+            
             Assert.IsTrue(IsElementVisible(home));
             Click(products);
             HoverNClick(Order);

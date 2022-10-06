@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace SeleniumQuiz.POM.AddProductsToCart
+namespace SeleniumQuiz.POM.DownloadInvoice
 {
     [TestClass]
     public class AddToCartTC : BaseClass
@@ -18,7 +18,10 @@ namespace SeleniumQuiz.POM.AddProductsToCart
             BaseClass.Browsers("chrome");
             BaseClass.OpenURL("https://automationexercise.com");
             AddToCart register = new AddToCart();
-            register.Addcart();
+            register.Addcart("Dont ring the bell, just put it on the doorway!","Ezaan Khan", "3842858235","301", "07", "2028");
+            string actual = findElement(By.XPath("//*[@id='header']/div/div/div/div[2]/div/ul/li[10]/a/text()")).Text;
+            Assert.AreEqual(" Logged in as ", actual);
+
         }
     }
 }

@@ -62,8 +62,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseClass.cs" />
-    <Compile Include="POM\AddProductsToCart\AddToCart.cs" />
-    <Compile Include="POM\AddProductsToCart\AddToCartTC.cs" />
+    <Compile Include="POM\CheckoutRegister\CheckoutRegister.cs" />
+    <Compile Include="POM\CheckoutRegister\CheckoutRegisterTC.cs" />
+    <Compile Include="POM\DownloadInvoice\AddToCart.cs" />
+    <Compile Include="POM\DownloadInvoice\AddToCartTC.cs" />
     <Compile Include="POM\Login\Login.cs" />
     <Compile Include="POM\Login\LoginTC.cs" />
     <Compile Include="POM\Logout\Logout.cs" />
